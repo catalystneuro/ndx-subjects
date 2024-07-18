@@ -5,9 +5,7 @@ from pynwb.testing import TestCase as pynwb_TestCase
 from pynwb.testing.mock.file import mock_NWBFile
 
 import pynwb
-from ndx_subjects.testing import (
-    mock_CElegansSubject,
-)
+from ndx_subjects.testing import mock_CElegansSubject
 
 
 class TestCElegansSubjectSimpleRoundtrip(pynwb_TestCase):

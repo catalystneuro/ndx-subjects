@@ -2,9 +2,7 @@
 
 import pytest
 
-from ndx_subjects.testing import (
-    mock_CElegansSubject,
-)
+from ndx_subjects.testing import mock_CElegansSubject
 
 
 def test_constructor_c_elegans_subject():
