@@ -16,14 +16,9 @@ extension_name = "ndx-subjects"
 __location_of_this_file = pathlib.Path(__file__)
 __spec_path = __location_of_this_file.parent / "spec" / f"{extension_name}.namespace.yaml"
 
-print(__file__)
-print(__spec_path)
-
 # If that path does not exist, we are likely running in editable mode. Use the local path instead
 if not os.path.exists(__spec_path):
     __spec_path = __location_of_this_file.parent.parent.parent / "spec" / f"{extension_name}.namespace.yaml"
-
-print(__spec_path)
 
 load_namespaces(str(__spec_path))
 
