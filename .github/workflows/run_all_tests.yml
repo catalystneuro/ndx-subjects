@@ -88,7 +88,7 @@ jobs:
           python -m venv test-wheel-env
           source test-wheel-env/bin/activate
           python -m pip install dist/*-none-any.whl
-          python -c "import ndx_patterned_ogen"
+          python -c "import ndx_subjects"
 
       - name: Test installation from a wheel (windows)
         if: ${{ matrix.os == 'windows-latest' }}
@@ -96,7 +96,7 @@ jobs:
           python -m venv test-wheel-env
           test-wheel-env/Scripts/activate.bat
           python -m pip install dist/*-none-any.whl
-          python -c "import ndx_patterned_ogen"
+          python -c "import ndx_subjects"
 
   run-all-tests-on-conda:
     name: ${{ matrix.name }}
@@ -172,4 +172,4 @@ jobs:
           python -m venv test-wheel-env
           source test-wheel-env/bin/activate
           python -m pip install dist/*-none-any.whl
-          python -c "import ndx_patterned_ogen"
+          python -c "import ndx_subjects"
