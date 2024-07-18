@@ -7,9 +7,11 @@ groups:
   - name: species
     doc: Species of subject. This subtype is fixed to be Caenorhabditis elegans.
     value: Caenorhabditis elegans
+    dtype: text
   - name: sex
     doc: The biological sex of the subject. This subtype is fixed to be O (other). Please use the `c_elegans_sex` to specify XX (hermaphrodite) or XO (male).
     value: O
+    dtype: text
   - name: c_elegans_sex
     doc: The biological sex of the C. elegans subject. Can be either XX (hermaphrodite) or XO (male).
     dtype: text
@@ -19,8 +21,8 @@ groups:
   - name: growth_stage_time
     doc: amount of time in current growth stage in ISO 8601 duration format.
     dtype: text
-    required: false
+    quantity: '?'
   - name: cultivation_temp
     doc: Worm cultivation temperature in Celsius.
     dtype: float32
-    required: false
+    quantity: '?'
