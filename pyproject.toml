@@ -70,11 +70,17 @@ include = [
 ]
 exclude = []
 
+
+
 [tool.pytest.ini_options]
 addopts = "--cov --cov-report html"
 
+
+
 [tool.codespell]
 skip = "htmlcov,.git,.mypy_cache,.pytest_cache,.coverage,*.pdf,*.svg,venvs,.tox,hdmf-common-schema,./docs/_build/*,*.ipynb"
+
+
 
 [tool.coverage.run]
 branch = true
@@ -86,10 +92,14 @@ exclude_lines = [
     "@abstract"
 ]
 
+
+
 [tool.black]
 line-length = 120
 preview = true
 exclude = ".git|.mypy_cache|.tox|.venv|venv|.ipynb_checkpoints|_build/|dist/|__pypackages__|.ipynb|docs/"
+
+
 
 [tool.ruff]
 select = ["E", "F", "T100", "T201", "T203"]
@@ -99,8 +109,13 @@ exclude = [
   "__pycache__",
   "build/",
   "dist/",
+  "*/__init__.py"
 ]
 line-length = 120
+
+[tool.ruff.lint.isort]
+relative-imports-order = "closest-to-furthest"
+known-first-party = ["ndx_subjects"]
 
 [tool.ruff.per-file-ignores]
 "src/pynwb/ndx_subjects/__init__.py" = ["E402"]  # Need to do global imports in this file after spec registration function calls
